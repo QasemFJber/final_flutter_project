@@ -13,10 +13,7 @@ class _Getting_Started_ScreenState extends State<Getting_Started_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Your App Name'),
-      ),
-      body: BottomNavigationBarWidget(),
+      body: BottomNavigation(),
     );
   }
 }
