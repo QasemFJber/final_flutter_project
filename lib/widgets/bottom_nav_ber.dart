@@ -1,12 +1,25 @@
+import 'package:final_flutter_project/widgets/more_widget.dart';
+import 'package:final_flutter_project/widgets/orders_widget.dart';
+import 'package:final_flutter_project/widgets/service_widget.dart';
+import 'package:final_flutter_project/widgets/user_widget.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavigationBarWidget extends StatefulWidget {
+import 'package:flutter/material.dart';
+
+class BottomNavigation extends StatefulWidget {
   @override
-  _BottomNavigationBarWidgetState createState() => _BottomNavigationBarWidgetState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
-class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
+class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    ServiceScreen(),
+    OrdersScreen(),
+    ProfileScreen(),
+    SettingsScreen(),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -18,23 +31,24 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: _getPage(_selectedIndex),
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        showUnselectedLabels: true,
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            backgroundColor: Color(0x6FC8FB),
-            icon: Icon(Icons.business),
+            backgroundColor: Colors.cyan,
+
+            icon: Icon(Icons.home),
             label: 'Service',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
+            icon: Icon(Icons.business),
             label: 'Orders',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.verified_user),
             label: 'User',
-
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more_horiz),
@@ -42,24 +56,9 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );
-  }
-
-  Widget _getPage(int index) {
-    switch (index) {
-      case 0:
-        return Text('Service Page');
-      case 1:
-        return Text('Orders Page');
-      case 2:
-        return Text('User Page');
-      case 3:
-        return Text('More Page');
-      default:
-        return Container();
-    }
   }
 }
