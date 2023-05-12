@@ -23,6 +23,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
+            backgroundColor: Color(0x6FC8FB),
             icon: Icon(Icons.business),
             label: 'Service',
           ),
@@ -33,6 +34,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'User',
+
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more_horiz),
