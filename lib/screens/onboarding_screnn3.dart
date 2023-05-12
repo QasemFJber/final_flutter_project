@@ -1,3 +1,4 @@
+import 'package:final_flutter_project/screens/getting_started_screen.dart';
 import 'package:final_flutter_project/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class Onboarding_ScreenThree extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => Getting_Started_Screen()),
                       (Route<dynamic> route)=>false,
 
                   );
