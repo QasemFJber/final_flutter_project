@@ -15,26 +15,36 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Onboarding_Screen()));
+
+    Future.delayed(Duration(seconds: 3),(){
+      Navigator.pushReplacementNamed(context, '/onboarding_screen');
     });
   }
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Center(
-          child: Image.asset('lib/images/Layer_2.png',width: 155,height: 155,),
-        ),
-        decoration: BoxDecoration(
+        decoration:  BoxDecoration(
           gradient: LinearGradient(
+            begin: AlignmentDirectional.topStart,
+            end: AlignmentDirectional.bottomEnd,
             colors: [
-              Color(0x346EDF),
-              Color(0x6CC3F9),
+              Color(0xFF3672E0),
+              Color(0xFF6DC5FA),
+
             ],
 
           ),
         ),
+        child: Center(
+          child:Image.asset('lib/images/Layer_2.png',) ,
+        ) /*Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Expanded(child: Container()),
+            Image.asset('lib/images/Layer_2.png'),
+          ],
+        ),*/
+
       ),
     );
   }
