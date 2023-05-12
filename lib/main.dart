@@ -1,3 +1,4 @@
+import 'package:final_flutter_project/screens/getting_started_screen.dart';
 import 'package:final_flutter_project/screens/login_screen.dart';
 import 'package:final_flutter_project/screens/onboarding_screen.dart';
 import 'package:final_flutter_project/screens/onboarding_screen2.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/onboarding_screen2': (context)=> Onboarding_ScreenTow(),
         '/onboarding_screen3' : (context) => Onboarding_ScreenThree(),
         '/login_screen' : (context) => LoginPage(),
+        '/getting_started_screen': (context) => Getting_Started_Screen(),
       },
     );
   }
