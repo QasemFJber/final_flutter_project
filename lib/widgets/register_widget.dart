@@ -18,25 +18,31 @@ class _RegisterWidgetState extends State<RegisterWidget> {
         SizedBox(
           height: 55,
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Full Name',
-          ),
-        ),
-        SizedBox(height: 16,),
-        TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Email',
-          ),
-        ),
 
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Full Name',
+            ),
+          ),
+        ),
+        SizedBox(height: 15),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Email',
+            ),
+          ),
+        ),
         SizedBox(
           height: 15,
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 20, left: 20, top: 33),
+          padding: const EdgeInsets.only(right: 20, left: 20),
           child: IntlPhoneField(
             decoration: InputDecoration(
               labelText: 'Phone Number',
@@ -58,7 +64,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           height: 15,
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
+          padding: const EdgeInsets.only(right: 20, left: 20),
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
@@ -86,26 +92,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                     value: true, // تحديد القيمة الافتراضية
                     onChanged: (value) {}, // تعديل القيمة عند التغيير
                   ),
-                  Text('Remmber me'),
+                  Text('I Read and Accept'),
+                  Text(' Home Service Terms & Conditions',style: TextStyle(color: Colors.blue),),
                 ],
               ),
             ),
-            Expanded(
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    // إضافة الاستجابة للنقر على Forgot Password
-                  },
-                  child: Text(
-                    'Forgot Password ?',
-                    style: TextStyle(
-                      color: Colors.black45,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+
           ],
         ),
         SizedBox(
@@ -121,18 +113,24 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'New Member ?',
+                      'HAVE ACCOUNT ?',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 15,
                       ),
                     ),
-                    Text(
-                      'SINGUP',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue),
-                    )
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/login_screen');
+                      },
+                      child: Text(
+                        'SING IN',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -170,7 +168,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       child: MaterialButton(
                         onPressed: () {},
                         child: Text(
-                          'LOGIN',
+                          'SING UP',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
