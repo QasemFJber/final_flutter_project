@@ -1,3 +1,4 @@
+import 'package:final_flutter_project/widgets/login_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
@@ -37,17 +38,7 @@ class LoginPage extends StatelessWidget {
                     topLeft: Radius.circular(20),
                   ),
                 ),
-                child: TabBar(
-                  tabs: [
-                    Tab(
-                      
-                      text: 'CUSTOMER',
-                    ),
-                    Tab(
-                      text: 'SERVICE PROVIDER',
-                    ),
-                  ],
-                ),
+                child: LoginWidget(),
               ),
             ),
           ],
