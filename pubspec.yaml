@@ -67,6 +67,7 @@ flutter:
     - lib/images/layer_3.png
     - lib/images/2352195.png
     - lib/images/spla.png
+    - lib/images/back.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
