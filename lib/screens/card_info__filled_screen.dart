@@ -64,9 +64,11 @@ class CardInfoFilled extends StatelessWidget {
             ),
             SizedBox(height: 32.0),
             Container(
+              width: 255,
+              height: 55,
               margin: EdgeInsets.symmetric(horizontal: 20.0),
               child: ElevatedButton(
-                child: Text('Go to Home'),
+                child: Text('GO TO HOME',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
                     context,
@@ -78,7 +80,7 @@ class CardInfoFilled extends StatelessWidget {
                   backgroundColor: Colors.blue.shade400,
                   padding: EdgeInsets.symmetric(vertical: 16.0),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
+                    borderRadius: BorderRadius.circular(7),
                   ),
                 ),
               ),
