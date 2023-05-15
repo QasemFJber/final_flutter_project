@@ -16,10 +16,11 @@ class _RegiserPageState extends State<RegiserPage> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              begin: AlignmentDirectional.topStart,
-              end: AlignmentDirectional.bottomEnd,
+              begin: AlignmentDirectional.topEnd,
+              end: AlignmentDirectional.topStart,
+
               colors: [
-                Color(0xFF3672E0),
+                Color(0xFF346EDF),
                 Color(0xFF6DC5FA),
               ]),
         ),
