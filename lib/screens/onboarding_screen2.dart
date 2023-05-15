@@ -16,8 +16,12 @@ class Onboarding_ScreenTow extends StatelessWidget {
               children: [
                 Image.asset('lib/images/2352195.png'),
                 SizedBox(height: 20),
-                Text(
-                  'Fast reservation with technicians and craftsmen',
+                const Text(
+                  'Fast reservation with technicians',
+                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                ),
+                const Text(
+                  'and craftsmen',
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
               ],
