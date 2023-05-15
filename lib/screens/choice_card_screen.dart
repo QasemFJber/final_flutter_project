@@ -1,57 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
-class MyPage extends StatelessWidget {
+class ChoiceCardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Page'),
+        title: Text('Completed '),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // الصوتيات
+
             Container(
               height: 200.0,
               color: Colors.grey,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  IconButton(
-                    icon: Icon(Icons.play_arrow),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.play_arrow),
-                    onPressed: () {},
-                  ),
+                  Image.asset('lib/images/in_email.png'),
                 ],
               ),
             ),
 
             SizedBox(height: 16.0),
 
-            // حقل الادخال
+
             TextFormField(
               maxLines: 10,
               decoration: InputDecoration(
-                hintText: 'Enter text here...',
+                hintText: 'More Details About Problem …...',
                 border: OutlineInputBorder(),
               ),
             ),
 
             SizedBox(height: 32.0),
 
-            // زر الانتقال للصفحة التالية
+
             Container(
               width: double.infinity,
               margin: EdgeInsets.symmetric(horizontal: 20.0),
               child: ElevatedButton(
                 child: Text('NEXT'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/card_info_screen');
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.black,
                   padding: EdgeInsets.symmetric(vertical: 16.0),
