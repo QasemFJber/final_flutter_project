@@ -67,6 +67,7 @@ class ServiceScreen extends StatelessWidget {
                       return GestureDetector(
                         onTap: (){
 
+                          Navigator.pushNamed(context, '/choice_file_screen');
                         },
                         child: Card(
                           shape: RoundedRectangleBorder(
