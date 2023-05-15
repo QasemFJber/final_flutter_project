@@ -74,7 +74,11 @@ flutter:
     - lib/images/1.png
     - lib/images/2.png
     - lib/images/3.png
+    - lib/images/map.png
     - lib/images/4.png
+    - lib/images/in_email.png
+    - lib/images/map.png
+    - lib/images/illustration.png
     - lib/images/1 - Copy.png
     - lib/images/2 - Copy.png
     - lib/images/3 - Copy.png
