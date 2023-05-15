@@ -16,9 +16,9 @@ class CardInfo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+
             Container(
               height: 200.0,
-              color: Colors.grey,
               child: Image.asset('lib/images/map.png'),
             ),
             SizedBox(height: 16.0),
