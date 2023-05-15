@@ -35,10 +35,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
+        unselectedItemColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.cyan,
+
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            backgroundColor: Colors.cyan,
-
             icon: Icon(Icons.home),
             label: 'Service',
           ),
