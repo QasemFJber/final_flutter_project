@@ -1,3 +1,6 @@
+import 'package:final_flutter_project/screens/card_info__filled_screen.dart';
+import 'package:final_flutter_project/screens/card_info_screen.dart';
+import 'package:final_flutter_project/screens/choice_card_screen.dart';
 import 'package:final_flutter_project/screens/getting_started_screen.dart';
 import 'package:final_flutter_project/screens/login_screen.dart';
 import 'package:final_flutter_project/screens/onboarding_screen.dart';
@@ -28,6 +31,9 @@ class MyApp extends StatelessWidget {
         '/login_screen' : (context) => LoginPage(),
         '/register_screen' : (context) => RegiserPage(),
         '/getting_started_screen': (context) => Getting_Started_Screen(),
+        '/choice_file_screen' : (context) => ChoiceCardScreen(),
+        '/card_info_screen' : (context) => CardInfo(),
+        '/card_info_filled_screen' : (context) => CardInfoFilled(),
       },
     );
   }
