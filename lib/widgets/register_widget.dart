@@ -16,9 +16,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     return Column(
       children: [
         SizedBox(
-          height: 55,
+          height: 33,
         ),
-
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: TextField(
@@ -28,7 +27,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             ),
           ),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 10),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: TextField(
@@ -39,7 +38,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           ),
         ),
         SizedBox(
-          height: 15,
+          height: 10,
         ),
         Padding(
           padding: const EdgeInsets.only(right: 20, left: 20),
@@ -61,7 +60,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           ),
         ),
         SizedBox(
-          height: 15,
+          height: 10,
         ),
         Padding(
           padding: const EdgeInsets.only(right: 20, left: 20),
@@ -80,7 +79,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           ),
         ),
         SizedBox(
-          height: 22,
+          height: 11,
         ),
         Row(
           children: [
@@ -93,11 +92,13 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                     onChanged: (value) {}, // تعديل القيمة عند التغيير
                   ),
                   Text('I Read and Accept'),
-                  Text(' Home Service Terms & Conditions',style: TextStyle(color: Colors.blue),),
+                  Text(
+                    ' Home Service Terms & Conditions',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ],
               ),
             ),
-
           ],
         ),
         SizedBox(
@@ -127,8 +128,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue
-                        ),
+                            color: Colors.blue),
                       ),
                     ),
                   ],
@@ -142,28 +142,30 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(33),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0xFFEDF696),
+                          offset: Offset(0, 5),
+                          blurRadius: 0,
+                          spreadRadius: 0,
+                        ),
+                      ],
                     ),
                     child: Container(
                       height: 50,
                       width: 150,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.blue.shade700,
-                            Colors.blueAccent.shade200
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5),
                         ),
-                        borderRadius: BorderRadius.circular(5),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.6),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
+                        gradient: LinearGradient(
+                          begin: AlignmentDirectional.topEnd,
+                          end: AlignmentDirectional.topStart,
+                          colors: [
+                            Color(0xFF6DC5FA),
+                            Color(0xFF346EDF),
+                          ],
+                        ),
                       ),
                       child: MaterialButton(
                         onPressed: () {},
@@ -178,17 +180,15 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       ),
                     ),
                   ),
+
                 )),
           ],
         ),
         SizedBox(
           height: 44,
         ),
-        Spacer(
-          flex: 1,
-        ),
         Padding(
-          padding: const EdgeInsets.only(left: 125),
+          padding: const EdgeInsets.only(left: 125, bottom: 20),
           child: Center(
             child: TextButton(
               onPressed: () {},
