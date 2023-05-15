@@ -116,11 +116,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue
-                        ),
+                            color: Colors.blue),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -137,26 +135,29 @@ class _LoginWidgetState extends State<LoginWidget> {
                       height: 50,
                       width: 150,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.blue.shade700,
-                            Colors.blueAccent.shade200
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5),
                         ),
-                        borderRadius: BorderRadius.circular(5),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.6),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            color: Color(0xFFEDF696),
+                            offset: Offset(0, 5),
+                            blurRadius: 10,
+                            spreadRadius: 0,
                           ),
                         ],
+                        gradient: LinearGradient(
+                            begin: AlignmentDirectional.topEnd,
+                            end: AlignmentDirectional.topStart,
+                            colors: [
+                              Color(0xFF346EDF),
+                              Color(0xFF6DC5FA),
+                            ]),
                       ),
                       child: MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/getting_started_screen');
+                        },
                         child: Text(
                           'LOGIN',
                           style: TextStyle(
@@ -178,7 +179,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           flex: 1,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 125),
+          padding: const EdgeInsets.only(left: 125, bottom: 22),
           child: Center(
             child: TextButton(
               onPressed: () {},
