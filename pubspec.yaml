@@ -68,6 +68,20 @@ flutter:
     - lib/images/2352195.png
     - lib/images/spla.png
     - lib/images/back.png
+    - lib/images/Shape 1.png
+    - lib/images/Forma 1.png
+    - lib/images/ds.png
+    - lib/images/1.png
+    - lib/images/2.png
+    - lib/images/3.png
+    - lib/images/4.png
+    - lib/images/1 - Copy.png
+    - lib/images/2 - Copy.png
+    - lib/images/3 - Copy.png
+    - lib/images/4 - Copy.png
+    - lib/images/ds - Copy.png
+    - lib/images/Background.png
+    - lib/images/Shape.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
