@@ -20,7 +20,11 @@ class Onboarding_Screen extends StatelessWidget {
                 Image.asset('lib/images/mobile-application-call-taxi-vector-illustration_82574-3185.png'),
                 SizedBox(height: 20),
                 const Text(
-                  'Fast reservation with technicians and craftsmen',
+                  'Fast reservation with technicians',
+                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                ),
+                const Text(
+                  'and craftsmen',
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
               ],
