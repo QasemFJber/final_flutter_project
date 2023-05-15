@@ -38,7 +38,7 @@ class Onboarding_ScreenThree extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => Getting_Started_Screen()),
+                    MaterialPageRoute(builder: (context) => LoginPage()),
                       (Route<dynamic> route)=>false,
 
                   );
