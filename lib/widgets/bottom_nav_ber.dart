@@ -35,15 +35,22 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
+        // selectedIconTheme: IconThemeData(color: Colors.amber),
         unselectedItemColor: Colors.white,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.cyan,
+        backgroundColor: const Color(0xFF6FC8FB),
 
-        items: const <BottomNavigationBarItem>[
+        items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Image.asset(
+              'lib/images/layer_3.png',
+                height: 30,
+                width: 30
+            ),
             label: 'Service',
+
           ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Orders',
