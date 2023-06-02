@@ -70,7 +70,7 @@ class _OrdersScreenState extends State<OrdersScreen>
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
           title: Text(orders[index].name),
-          subtitle: Text(orders[index].date),
+          subtitle: Text(orders[index].date,style: TextStyle(color: Colors.blue.shade900,fontWeight: FontWeight.bold),),
           trailing: Text(orders[index].type.toString()),
         );
       },
