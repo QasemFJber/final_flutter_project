@@ -1,0 +1,3 @@
+#app-dir: lip/l10n
+#template-srb-file:app_en.arb
+#output-localization_file: app-localization.dart
