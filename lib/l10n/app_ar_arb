@@ -32,5 +32,8 @@
     'Logout': 'تسجيل الخروج',
     'Fast reservation with technicians and craftsmen': 'حجز سريع مع فنيين وحرفيين',
     'NEXT': 'التالي',
+    #app-dir: lip/l10n
+    #template-srb-file:app_en.arb
+    #output-localization_file: app-localization.dart
   }
 
