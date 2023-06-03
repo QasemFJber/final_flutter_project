@@ -11,6 +11,7 @@ class RegisterWidget extends StatefulWidget {
 }
 
 class _RegisterWidgetState extends State<RegisterWidget> {
+  bool? _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -88,8 +89,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                 children: [
                   Checkbox(
                     checkColor: Colors.lightBlueAccent,
-                    value: true, // تحديد القيمة الافتراضية
-                    onChanged: (value) {}, // تعديل القيمة عند التغيير
+                    value: _isChecked,
+                    onChanged: (value) {
+                      setState(() {
+                        _isChecked = value;
+                      });
+                    },
                   ),
                   Text('I Read and Accept'),
                   Text(
