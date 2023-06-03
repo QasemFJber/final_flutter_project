@@ -9,6 +9,7 @@ class LoginWidget extends StatefulWidget {
 }
 
 class _LoginWidgetState extends State<LoginWidget> {
+  bool? _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -64,8 +65,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                 children: [
                   Checkbox(
                     checkColor: Colors.lightBlueAccent,
-                    value: true, // تحديد القيمة الافتراضية
-                    onChanged: (value) {}, // تعديل القيمة عند التغيير
+                    value: _isChecked,
+                    onChanged: (value) {
+                      setState(() {
+                        _isChecked = value;
+                      });
+                    },
                   ),
                   Text('Remmber me'),
                 ],
@@ -76,7 +81,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    // إضافة الاستجابة للنقر على Forgot Password
+
                   },
                   child: Text(
                     'Forgot Password ?',
@@ -156,7 +161,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       child: MaterialButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/getting_started_screen');
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                            '/getting_started_screen',
+                                (Route<dynamic> route) => false,
+                          );
                         },
                         child: Text(
                           'LOGIN',
