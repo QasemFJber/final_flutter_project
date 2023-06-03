@@ -69,8 +69,8 @@ class _OrdersScreenState extends State<OrdersScreen>
       itemCount: orders.length,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
-          title: Text(orders[index].name),
-          subtitle: Text(orders[index].date,style: TextStyle(color: Colors.blue.shade900,fontWeight: FontWeight.bold),),
+          title: Text(orders[index].name,style: TextStyle(fontWeight: FontWeight.bold),),
+          subtitle: Text(orders[index].date,style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),
           trailing: Text(orders[index].type.toString()),
         );
       },
