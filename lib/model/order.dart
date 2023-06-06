@@ -1,9 +1,28 @@
-import '../enams/OrderType.dart';
+import '../enums/OrderType.dart';
 
 class Order {
-  final String name;
-  final String date;
-  final OrderType type;
+  String _name;
+  String _date;
+  OrderType _type;
 
-  Order(this.name, this.date, this.type);
+  Order({required String name, required String date, required OrderType type})
+      : _name = name,
+        _date = date,
+        _type = type;
+
+  String get name => _name;
+  String get date => _date;
+  OrderType get type => _type;
+
+  set name(String name) {
+    _name = name;
+  }
+
+  set date(String date) {
+    _date = date;
+  }
+
+  set type(OrderType type) {
+    _type = type;
+  }
 }
