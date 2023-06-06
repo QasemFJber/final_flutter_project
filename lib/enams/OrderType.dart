@@ -1,0 +1,1 @@
+enum OrderType { Delivery, Pickup }

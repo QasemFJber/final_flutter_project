@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../enams/OrderType.dart';
+import '../model/order.dart';
+
 class OrdersScreen extends StatefulWidget {
   @override
   _OrdersScreenState createState() => _OrdersScreenState();
@@ -78,12 +81,4 @@ class _OrdersScreenState extends State<OrdersScreen>
   }
 }
 
-class Order {
-  final String name;
-  final String date;
-  final OrderType type;
 
-  Order(this.name, this.date, this.type);
-}
-
-enum OrderType { Delivery, Pickup }

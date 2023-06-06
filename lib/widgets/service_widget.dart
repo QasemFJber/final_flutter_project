@@ -17,7 +17,7 @@ class ServiceScreen extends StatelessWidget {
     'lib/images/ds - Copy.png',
   ];
 
-  final List<String> texts = ['Carpenter'];
+  // final List<String> texts = ['Carpenter'];
 
   @override
   Widget build(BuildContext context) {
@@ -76,10 +76,10 @@ class ServiceScreen extends StatelessWidget {
             ),
 
             SizedBox(height: 10),
-            Center(
+            const Center(
               child: Text(
                 'Select Service',
-                style: TextStyle(fontSize: 24, color: Colors.blue),
+                style: TextStyle(fontSize: 24, color: Colors.blue,fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(height: 16),
@@ -110,8 +110,8 @@ class ServiceScreen extends StatelessWidget {
                               height: 64,
                             ),
                             SizedBox(height: 8),
-                            Text(
-                              texts[index % texts.length],
+                            const Text(
+                              "Carpenter",
                               style: TextStyle(color: Colors.blue),
                             ),
                           ],
