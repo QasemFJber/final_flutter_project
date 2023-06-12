@@ -14,12 +14,16 @@ class _OrdersScreenState extends State<OrdersScreen>
 
   List<Order> _completedOrders = [
     Order('Order 1', '05/01/2023', OrderType.Delivery),
+    Order('Order 1', '05/01/2023', OrderType.Delivery),
+    Order('Order 2', '05/02/2023', OrderType.Pickup),
     Order('Order 2', '05/02/2023', OrderType.Pickup),
     Order('Order 3', '05/03/2023', OrderType.Delivery),
   ];
 
   List<Order> _underwayOrders = [
     Order('Order 4', '05/04/2023', OrderType.Delivery),
+    Order('Order 4', '05/04/2023', OrderType.Delivery),
+    Order('Order 5', '05/05/2023', OrderType.Pickup),
     Order('Order 5', '05/05/2023', OrderType.Pickup),
   ];
 
@@ -27,6 +31,12 @@ class _OrdersScreenState extends State<OrdersScreen>
     Order('Order 6', '05/06/2023', OrderType.Delivery),
     Order('Order 7', '05/07/2023', OrderType.Delivery),
     Order('Order 8', '05/08/2023', OrderType.Pickup),
+    Order('Order 9', '05/09/2023', OrderType.Pickup),
+    Order('Order 7', '05/07/2023', OrderType.Delivery),
+
+    Order('Order 9', '05/09/2023', OrderType.Pickup),
+    Order('Order 7', '05/07/2023', OrderType.Delivery),
+
     Order('Order 9', '05/09/2023', OrderType.Pickup),
   ];
 
