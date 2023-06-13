@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../enams/OrderType.dart';
 import '../model/order.dart';
 
+
 class OrdersScreen extends StatefulWidget {
   @override
   _OrdersScreenState createState() => _OrdersScreenState();
@@ -11,7 +12,6 @@ class OrdersScreen extends StatefulWidget {
 class _OrdersScreenState extends State<OrdersScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-
   List<Order> _completedOrders = [
     Order('Order 1', '05/01/2023', OrderType.Delivery),
     Order('Order 1', '05/01/2023', OrderType.Delivery),
@@ -33,10 +33,8 @@ class _OrdersScreenState extends State<OrdersScreen>
     Order('Order 8', '05/08/2023', OrderType.Pickup),
     Order('Order 9', '05/09/2023', OrderType.Pickup),
     Order('Order 7', '05/07/2023', OrderType.Delivery),
-
     Order('Order 9', '05/09/2023', OrderType.Pickup),
     Order('Order 7', '05/07/2023', OrderType.Delivery),
-
     Order('Order 9', '05/09/2023', OrderType.Pickup),
   ];
 
